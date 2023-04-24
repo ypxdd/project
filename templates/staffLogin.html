@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Create Customer{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<h1 class="display-4">Please login</h1>
+<br>
+<div class="center">
+<!--    <div class = "child">-->
+    <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        <br>
+        <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <br>
+                <input class="btn" type="submit" value="Login">
+<!--        <input class="btn btn-default" type="submit" value="Login">-->
+    </form>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+<!--        </div>-->
+</div>
+{% endblock %}
